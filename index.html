@@ -37,12 +37,14 @@
                     vibe.
                 </h3>
             </div>
-        </section>
-        <section class="welcome">
-            <div class="vid-cont">
-                <video src="video/welcome.mp4"  muted loop playsinline id="welcome-video"></video>
+            <div class="welcome">
+                <div class="vid-cont">
+                    <!-- <video src="video/welcome.mp4"  muted loop playsinline id="welcome-video"></video> -->
+                    <canvas id="explode-view"></canvas>
+                </div>
             </div>
         </section>
+        
         <section class="boxes">
             <div class="grid-con" id="boxes-grid">
                 <h2 class="h2-reg col-span-full t-col-start-1 t-col-span-4">
@@ -65,6 +67,41 @@
                     <p class="p-description">Ergonomically designed with soft silicone tips in multiple sizes for a secure, comfortable fit during extended use.</p>
                 </div>
                 <div class="col-span-2 t-col-span-3 infobox"></div>
+            </div>
+        </section>
+        <section class="anc">
+            <div class="grid-con">
+                <p class="p-xl col-span-full t-col-start-3 t-col-end-11">
+                    Immerse yourself in crystal-clear sound <br>
+                    <span>with Active Noise Cancelling, designed to block out distractions and let you focus on what matters most. Whether it's silencing the roar of an airplane or the hum of city streets, ANC creates a personal audio oasis wherever you go.</span> 
+                </p>
+            </div>
+        </section>
+        <section class="colors">
+            <div class="grid-con" id="colors-grid">
+                <h2 class="h2-reg col-span-full t-col-start-1 t-col-span-5">
+                    Style them your way.
+                </h2>
+                <!-- <div class="col-span-2 t-col-start-9 t-col-end-13 buttons">
+                    <button id="white"></button>
+                    <button id="black"></button>
+                    <button id="red"></button>
+                    <button id="purple"></button>
+                </div> -->
+                <div class="col-span-full" id="comp">
+                    <div id="mobile-tablet-view">
+                        <img src="img/vid1_0005.png" alt="#">
+                        <img src="img/vid1_0150.png" alt="#">
+                    </div>
+                </div>
+                <div class="col-span-full">
+                    <div id="comparison-cont">
+                        <div id="color-div">
+                            <div id="divisor"></div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" id="slider">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -113,7 +150,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
 
     <!-- <script src="js/script.js"></script> -->
-    <script src="js/scrub.js"></script>
+    <script src="js/scrub2.js"></script>
+    <script src="js/comp.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </body>
 </html>
