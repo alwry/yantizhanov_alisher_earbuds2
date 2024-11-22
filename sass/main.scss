@@ -200,14 +200,19 @@
     background-color: #000;
   }
 
-  h2, p, li {
-    font-family: "Manrope", serif;;
+  h1, h2, h3, h4, p, li, a{
+    font-family: "Manrope", serif;
+    margin: 0;
   }
 
-  h2, p, ul li, a {
-    color: #fff;
+  h1, h2, h3, h4 {
+    line-height: 1;
   }
 
+  p {
+    font-size: 14px;
+  }
+  
   ul {
     list-style-type: none;
     display: flex;
@@ -229,6 +234,33 @@
     width: 100%;
   }
 
+  .hero-cont {
+    height: 700px;
+  }
+
+  .h2-large {
+    font-size: 100px;
+    line-height: .9;
+  }
+
+  .h3-large {
+    font-size: 32px;
+  }
+
+  .h2-large, .h3-large {
+      margin-top: 500px;
+  }
+
+  .h2-reg {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  #hero-grid {
+    align-items: end;
+  }
+
+
   .welcome {
     width: 100%;
     height: 100%;
@@ -240,13 +272,47 @@
   }
 
   .welcome {
-    height: 250vh;
+    height: 170vh;
   }
 
   .vid-cont {
     position: sticky;
     top: 0;
   }
+
+
+.infobox {
+  height: 300px;
+  background-color: #00000014;
+  border-radius: 35px;
+  margin: 10px 0;
+}
+
+.infotext {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.infotext .p-description {
+  margin-bottom: 20px;
+}
+
+.p-heading {
+  color: #000;
+}
+
+.p-description {
+  color: #858585;
+}
+
+#boxes-grid .h2-reg {
+  margin-bottom: 30px;
+}
+
 
 
 
