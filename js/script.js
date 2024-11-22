@@ -1,4 +1,4 @@
-// Handles loading the events for <model-viewer>'s slotted progress bar
+(() => {
 const onProgress = (event) => {
     const progressBar = event.target.querySelector('.progress-bar');
     const updatingBar = event.target.querySelector('.update-bar');
@@ -10,23 +10,27 @@ const onProgress = (event) => {
       progressBar.classList.remove('hide');
     }
   };
+
+
   const hotspots = document.querySelectorAll('.Hotspot');
-  const hotspotText = [
-    {name: "Crystal-clear sound",
-     description: "These earbuds offer crystal-clear sound quality with enhanced bass for an immersive audio experience"},
-    {name: "24 hours life",
-     description: "Enjoy up to 24 hours of playtime with rapid wireless charging capabilities to keep the music going all day"},
-    {name: "Play modes",
-     description: "Stay aware of your surroundings with a transparency mode that lets in ambient sound when you need it"},
-    {name: "3D Sound",
-     description: "Immerse yourself in 3D surround sound, ideal for both music lovers and gamers alike"}
+  const annotations = document.querySelectorAll('.HotspotAnnotation');
+  const hotspotDescriptions = [
+    {
+     text: "Experience uninterrupted sound with an astounding 120 hours of playback on a single charge."},
+    {
+     text: "Immerse yourself in pure audio with advanced Active Noise Cancelling technology."},
+    {
+     text: "Stay seamlessly connected with next-gen Bluetooth technology."},
+    {
+     text: "Enjoy faster charging times and spend more time enjoying your music and less time plugged in."}
   ];
   
-  
-  
-  
-  
-  
-  
-  
+  annotations.forEach((annotation, index) => {
+    const p = document.createElement('p');
+    p.textContent = hotspotDescriptions[index].text;
+    annotation.appendChild(p);
+  })
+
   document.querySelector('model-viewer').addEventListener('progress', onProgress);
+
+})();
