@@ -226,6 +226,11 @@ ul {
 
 a {
   text-decoration: none;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
 }
 
 .logo {
@@ -329,6 +334,10 @@ a {
   text-align: center;
 }
 
+.opacity {
+  color: #fff;
+}
+
 #comp {
   margin-top: 30px;
 }
@@ -344,7 +353,7 @@ a {
 .vision-text {
   margin-bottom: 100px;
   margin-top: 30px;
-  width: 50%;
+  width: 40%;
 }
 
 .vision-box {

@@ -223,6 +223,11 @@
 
   a {
     text-decoration: none;
+    color: #fff;
+  }
+
+  .hidden {
+    display: none;
   }
 
   .logo {
@@ -331,6 +336,10 @@
   text-align: center;
 }
 
+.opacity {
+  color: #fff;
+}
+
 // .buttons {
 //   display: flex;
 //   justify-content: flex-end;
@@ -382,7 +391,7 @@
 .vision-text {
   margin-bottom: 100px;
   margin-top: 30px;
-  width: 50%;
+  width: 40%;
 }
 
 .vision-box {
