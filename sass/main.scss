@@ -277,10 +277,6 @@
     width: 100vw;
   }
 
-  // .welcome {
-  //   height: 200vh;
-  // }
-
   .vid-cont {
     position: sticky;
     top: 0;
@@ -377,6 +373,33 @@
 
 #comparison-cont {
   display: none;
+}
+
+.colors {
+  margin-bottom: 50px;
+}
+
+.vision-text {
+  margin-bottom: 100px;
+  margin-top: 30px;
+  width: 50%;
+}
+
+.vision-box {
+  height: 100%;
+  background-color: #DADCE0;
+  border-radius: 35px;
+  margin-bottom: 50px;
+  width: 40%;
+}
+
+.vision-block {
+  display: flex;
+  margin-bottom: 90px;
+}
+
+.vision-block p {
+  width: 60%;
 }
 
 #mobile-tablet-view img{
