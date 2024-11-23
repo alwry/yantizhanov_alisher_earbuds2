@@ -414,8 +414,8 @@ a {
   }
   #color-div {
     position: relative;
-    aspect-ratio: 16/10;
-    background-image: url(../img/vid1_0005.png);
+    aspect-ratio: 16/9;
+    background-image: url(../img/xray1_0285.jpg);
     background-size: cover;
     background-position: 50%;
   }
@@ -423,7 +423,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../img/vid1_0150.png);
+    background-image: url(../img/xray0285.jpg);
     background-size: cover;
     height: 100%;
     width: 50%;
