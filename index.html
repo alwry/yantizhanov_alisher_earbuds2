@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Earbuds Modelviewer</title>
+    <title>Nestart: Vibe</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" href="css/main.css" rel="stylesheet"/>
@@ -14,6 +14,7 @@
   <body>
     
     <header>
+        <h1 class="hidden">Welcome to our great great website</h1>
         <div class="grid-con" id="header-cont">
             <div class="col-span-1 logo">
                 <img src="/img/nestart-logo.svg" alt="nestart logo">
@@ -69,8 +70,9 @@
             </div>
         </section>
         <section class="anc">
+            <h2 class="hidden">Info about active noise cancelling</h2>
             <div class="grid-con">
-                <p class="p-xl col-span-full t-col-start-3 t-col-end-11">
+                <p class="p-xl col-span-full t-col-start-3 t-col-end-11 opacity">
                     Immerse yourself in crystal-clear sound <br>
                     <span>with Active Noise Cancelling, designed to block out distractions and let you focus on what matters most. Whether it's silencing the roar of an airplane or the hum of city streets, ANC creates a personal audio oasis wherever you go.</span> 
                 </p>
@@ -81,12 +83,6 @@
                 <h2 class="h2-reg col-span-full t-col-start-1 t-col-span-5">
                     Style them your way.
                 </h2>
-                <!-- <div class="col-span-2 t-col-start-9 t-col-end-13 buttons">
-                    <button id="white"></button>
-                    <button id="black"></button>
-                    <button id="red"></button>
-                    <button id="purple"></button>
-                </div> -->
                 <div class="col-span-full" id="comp">
                     <div id="mobile-tablet-view">
                         <img src="img/vid1_0005.png" alt="#">
@@ -105,6 +101,7 @@
         </section>
 
         <section id="vision">
+            <h2 class="hidden">Our mission</h2>
             <div class="grid-con">
                 <div class="vision-block col-span-full">
                     <div class="vision-text">
@@ -138,7 +135,7 @@
 
     </main>
 
-        <!-- <model-viewer src="model/earcopy.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="img/poster.webp" shadow-intensity="0.18" environment-image="legacy" exposure="1.12">
+        <model-viewer src="model/earcopy.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="img/poster.webp" shadow-intensity="0.18" environment-image="legacy" exposure="1.12">
             <button class="Hotspot" slot="hotspot-1" id="hotspot-1" data-position="-450.2908616870874m 390.2175973836304m -14.154115550190909m" data-normal="-0.1846493824545395m -0.07683160537637566m -0.9797966676685762m" data-visibility-attribute="visible">
                 <div class="HotspotAnnotation"><h2>120 Hours Playback</h2></div>
             </button><button class="Hotspot" slot="hotspot-2" id="hotspot-2" data-position="-522.6024966047194m 1132.5377520325096m 149.4483811021555m" data-normal="-0.6993631723071159m -0.40666091767582674m -0.5878078353131929m" data-visibility-attribute="visible">
@@ -157,12 +154,12 @@
             <div id="ar-prompt">
                 <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
             </div>
-        </model-viewer> -->
+        </model-viewer>
 
     <footer>
         <div class="grid-con" id="footer-cont">
             <div class="col-start-2 col-span-3 t-col-span-5">
-                <p class="footer-p">Earbuds 2024. All rights reserved</p>
+                <p class="footer-p">Nestart 2024. All rights reserved</p>
             </div>
             <div class="col-span-full t-col-start-8 t-col-span-5">
                 <ul class="footer-ul">
@@ -179,10 +176,25 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis()
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+        
+    </script>
 
     <!-- <script src="js/script.js"></script> -->
     <script src="js/scrub2.js"></script>
     <script src="js/comp.js"></script>
+    <script src="js/trigger.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </body>
 </html>
