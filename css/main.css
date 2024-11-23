@@ -17,17 +17,6 @@ body {
   display: none;
 }
 
-html {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-
 model-viewer {
   width: 100%;
   height: 90%;
@@ -242,15 +231,20 @@ a {
   width: 100%;
 }
 
+#hero-grid {
+  height: 100vh;
+}
+
 .hero-cont {
   background-color: #000;
   margin-bottom: 30px;
 }
 
 .h2-large {
-  font-size: 100px;
+  font-size: 50px;
   line-height: 0.9;
   color: #fff;
+  margin-bottom: 30px;
 }
 
 .h3-large {
@@ -258,17 +252,23 @@ a {
   color: #fff;
 }
 
-.h2-large, .h3-large {
-  margin-top: 500px;
-}
-
 .h2-reg {
   font-size: 48px;
   font-weight: 700;
 }
 
+.h2-large, .h3-large {
+  padding-bottom: 100px;
+}
+
 #hero-grid {
   align-items: end;
+}
+
+.hero-text {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .welcome {
@@ -294,9 +294,16 @@ a {
 
 .infobox {
   height: 300px;
-  background-color: rgba(0, 0, 0, 0.0784313725);
   border-radius: 35px;
   margin: 10px 0px;
+}
+
+.infobox img, .vision-box img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: inherit;
 }
 
 .infotext {
@@ -329,7 +336,7 @@ a {
 }
 
 .p-xl {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   text-align: center;
 }
@@ -351,26 +358,28 @@ a {
 }
 
 .vision-text {
-  margin-bottom: 100px;
-  margin-top: 30px;
-  width: 40%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+  width: 90%;
 }
 
 .vision-box {
-  height: 100%;
+  height: 200px;
   background-color: #DADCE0;
   border-radius: 35px;
-  margin-bottom: 50px;
-  width: 40%;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .vision-block {
   display: flex;
+  flex-direction: column;
   margin-bottom: 90px;
 }
 
 .vision-block p {
-  width: 60%;
+  width: 100%;
 }
 
 #mobile-tablet-view img {
@@ -390,7 +399,13 @@ a {
   font-size: 12px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
+  .h2-large {
+    font-size: 80px;
+  }
+  .h3-large {
+    font-size: 32px;
+  }
   #mobile-tablet-view {
     display: none;
   }
@@ -412,6 +427,15 @@ a {
     background-size: cover;
     height: 100%;
     width: 50%;
+  }
+  .vision-text {
+    width: 50%;
+  }
+  .vision-box {
+    width: 50%;
+  }
+  .vision-block {
+    flex-direction: row;
   }
   input[type=range] {
     -webkit-appearance: none;
